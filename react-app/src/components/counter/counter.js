@@ -20,18 +20,20 @@ class Counter extends React.Component {
     // console.log("Increment Counter INVOKED!");
     // console.log("idx = ", idx);
     // console.log(this.state.counters[idx]);
-    this.state.counters[idx].count++
+    const myArray = [...this.state.counters]
+    myArray[idx].count++
     this.setState({
-      counters: this.state.counters
+      counters: myArray
     })
   }
   DecrementCounter = (idx) => {
     // console.log("Decrement Counter INVOKED!");
     // console.log("idx = ", idx);
     // console.log(this.state.counters[idx]);
-    this.state.counters[idx].count--
+    const myArray = [...this.state.counters]
+    myArray[idx].count--
     this.setState({
-      counters: this.state.counters
+      counters: myArray
     })
   }
 
