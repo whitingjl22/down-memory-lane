@@ -3,9 +3,6 @@ import "./App.css"
 import "react-router"
 import { BrowserRouter, Route, Link } from "react-router-dom"
 import Counter from "./components/counter/Counter"
-import AddToDoItems from "./components/todo/AddToDoItems"
-import ToDoFilters from "./components/todo/ToDoFilters"
-import ToDoList from "./components/todo/ToDoList"
 import ToDoPage from "./components/todo/ToDoPage"
 
 class App extends Component {
@@ -26,7 +23,7 @@ class App extends Component {
             </li>
           </ul>
           {/* This is how we define what components should render based off of the url */}
-          {/* <Route exact path="/" component={State} /> */}
+          {/* <Route exact path="/" /> */}
           <Route path="/counter" component={Counter} />
           <Route path="/todopage" component={ToDoPage} />
         </div>
